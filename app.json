@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "laufwort",
+    "name": "Laufwort",
     "slug": "laufwort",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     },
     "android": {
       "adaptiveIcon": {
@@ -20,6 +20,23 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Laufwort utilise le micro pour enregistrer ta répétition.",
+          "recordAudioAndroid": true,
+          "enableBackgroundPlayback": true
+        }
+      ],
+      "expo-font",
+      "expo-asset"
+    ],
+    "scheme": "laufwort",
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
